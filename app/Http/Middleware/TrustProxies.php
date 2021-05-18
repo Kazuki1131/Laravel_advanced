@@ -12,7 +12,7 @@ class TrustProxies extends Middleware
      *
      * @var array
      */
-    protected $proxies;
+    protected $proxies = '**'; //chromeの最新バージョン対策
 
     /**
      * The current proxy header mappings.
