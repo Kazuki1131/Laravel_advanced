@@ -5,3 +5,8 @@
         @endforeach
     </ul>
 @endif
+@if (session('flash_message'))
+    <div class="alert alert-info">
+        {{ session('flash_message') }}
+    </div>
+@endif

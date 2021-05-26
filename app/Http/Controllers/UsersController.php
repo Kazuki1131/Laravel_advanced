@@ -85,4 +85,16 @@ class UsersController extends Controller
 
         return view('users.followers', $data);
     }
+    
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/')->with('flash_message', '退会が完了しました');
+    }
+
+    public function delete_confirm()
+    {
+        return view('users.delete_confirm');
+    }
 }
